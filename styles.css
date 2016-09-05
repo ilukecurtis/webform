@@ -1,0 +1,96 @@
+/*Luke Curtis - 2016 - l.curtis@hernebayhigh.org */
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+body {
+	font-family: montserrat, arial, verdana;
+	margin:0;
+	min-width:1177px;
+}
+#siteWrap{
+	overflow:hidden;
+	background-color:black;
+}
+.centerText{
+	text-align: center;
+	margin-top:25vh;
+	color:white;
+	font-size:40px;
+}
+#topLeftLaunch{
+	min-width:34%;
+	min-height:50vh;
+	float:left;
+	background:url(images/reproBG.png);
+	background-size:cover;
+}
+#topMiddleLaunch{
+	min-width:33%;
+	min-height:50vh;
+	float:right;	
+	background:url(images/referralBG.jpg);
+	background-size:cover;
+}
+#topRightLaunch{
+	min-width:33%;
+	min-height:50vh;
+	float:right;
+	background:url(images/financeBG.jpg);
+	background-size:cover;
+}
+#bottomLeftLaunch{
+	min-width:34%;
+	min-height:50vh;
+	float:left;
+	background:url(images/printBG.jpg);
+	background-size:cover;
+}
+#bottomMiddleLaunch{
+	min-width:33%;
+	min-height:50vh;
+	float:left;
+	background:url(images/supportBG.jpg);
+	background-size:cover;
+}
+#bottomRightLaunch{
+	min-width:33%;
+	min-height:50vh;
+	float:left;
+	background:url(images/weatherBG.jpg);
+	background-size:cover;
+}
+.image{
+	transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.3);
+    margin:0;
+}
+.image:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1); /* IE 9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand')"; /* IE8 */
+   filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand'); /* IE6 and 7 */ 
+   box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.1);
+} 
+.tag {
+   position: absolute;
+   z-index: 1000;
+   padding: 5px;
+   color: #FFFFFF;
+   font-weight: bold;
+   box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.3);
+   text-align:center;
+}
+#logo{
+	height:120px;
+}
+.bannerLink{
+	font-size:10px;
+	margin-right:5px;
+	padding-top:2px;
+	color:#FFFFFF;
+}
