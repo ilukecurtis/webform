@@ -32,7 +32,7 @@ if(isset($_GET['formCompleted'])){
 <div id="wrapper">
   <img src="images/logo.png" id="HBHSLogo">
   <span id="title"> Reprographics Request Form </span>
-  <span class="requestText"> Contact: (EMAIL OMMITED FROM THIS BUILD) <br>
+  <span class="requestText"> Contact: example@example.com <br>
   Hours: Term time only - Mon-Thur 8-4 - Friday 8-3:30 <br>
   Please ensure all requests are made at least 24 <b>BEFORE</b> they are required. <br> </span>
 </div>

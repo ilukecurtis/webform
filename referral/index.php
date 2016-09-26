@@ -54,7 +54,9 @@ if(isset($_GET['formCompleted'])){
   	  		<option value="LSA">LSA</option>
   	   		<option value="Cover Supervisor">Cover Supervisor</option>
   	  		<option value="LRC Staff">LRC Staff</option>
-  	</select><br>
+			<option value="HOMC">Head of Mini Community</option>
+			<option value="MCSO">Mini Community Support Officer</option>
+  	</select><br><br>
       <input type="date" id="datepicker" placeholder="Date" name="datepicker">
       <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
