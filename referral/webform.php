@@ -11,23 +11,24 @@ $stringArray=array();
 array_push($stringArray, "Staff Name", "Position", "Mentor Group", "Student Name", "Subject", "Year Group", "Description", "Date", "Key Stage");
 
 if((strcmp($_POST["yearGroup"],'Year 7')==0)||(strcmp($_POST["yearGroup"],'Year 8')==0)||(strcmp($_POST["yearGroup"],'Year 9')==0)){
-    array_push($referralArray, "Key Stage 4");
+    array_push($referralArray, "Key Stage 3");
 }
 elseif ((strcmp($_POST["yearGroup"],'Year 10')==0)||(strcmp($_POST["yearGroup"],'Year 11')==0)) {
-    array_push($referralArray, "Key Stage 5");
+    array_push($referralArray, "Key Stage 4");
 }
-else{
-	array_push($referralArray, "Key Stage 6");
+elseif ((strcmp($_POST["yearGroup"],'Year 12')==0)||(strcmp($_POST["yearGroup"],'Year 13')==0)||(strcmp($_POST["yearGroup"],'Year 14')==0)) {
+
+	array_push($referralArray, "Key Stage 5");
 }
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.example';  // Specify main and backup SMTP servers
+$mail->Host = 'example.example';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = false;                               // Enable SMTP authentication
 //$mail->Username = 'user@example.com';                 // SMTP username
 //$mail->Password = 'secret';                           // SMTP password
 //$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 25;                                    // TCP port to connect to
-$mail->setFrom('noreply@example', "Learning Referral");
-$mail->addAddress('example@example.com', 'S SMITH');     // Add a recipient
+$mail->setFrom('noreply@example.org', "Learning Referral");
+$mail->addAddress('b.jones@example.org', 'B JONES');     // Add a recipient
 $mail->Subject = 'Referral from: '.$_POST["staffName"]. '.';
 $mail->AddEmbeddedImage('img/banner.jpg', 'banner');
 $mail->AddEmbeddedImage('img/logo.jpg', 'logo');
@@ -161,9 +162,9 @@ $mail->Body .= "
                                        <tbody>
                                           <tr>
                                              <td height='50' align='center' valign='middle' style='font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #FFFFFF' st-content='menu'>
-                                                <a href='' style='color: #FFFFFF;text-decoration: none;'>Portal</a>
+                                                <a href='https://www.klz.org.uk/schools/8865448/Staff/SitePages/Home.aspx' style='color: #FFFFFF;text-decoration: none;'>Portal</a>
                                                 &nbsp;&nbsp;&nbsp;
-                                                <a href='' style='color: #FFFFFF;text-decoration: none;'>Support</a>
+                                                <a href='http://5448-whd-001.school.hernebayhigh.org:8081' style='color: #FFFFFF;text-decoration: none;'>Support</a>
                                                 &nbsp;&nbsp;&nbsp;
                                              </td>
                                           </tr>
@@ -412,11 +413,17 @@ $mail->Body .= "
    </html>";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 $mail->IsHTML(true);  
-
-if(!$mail->send()) {
+//if staff name NOT passed to form dont send
+if (!empty($_POST['staffName'])){
+   if(!$mail->send()) {
    header( 'Location: index.php?formCompleted=false' ) ;
+   }
+   else{
+   header( 'Location: index.php?formCompleted=true' ) ;
+   }
 }
 else{
-	header( 'Location: index.php?formCompleted=true' ) ;
+   header( 'Location: index.php?formCompleted=false' ) ;
 }
+
 ?>
