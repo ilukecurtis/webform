@@ -3,7 +3,7 @@
 body {
 	font-family: montserrat, arial, verdana;
 	margin:0;
-	min-width:1177px;
+	min-width:1461px;
 }
 #siteWrap{
 	overflow:hidden;
@@ -13,51 +13,56 @@ body {
 	text-align: center;
 	margin-top:25vh;
 	color:white;
-	font-size:40px;
+	font-size:38px;
 }
-#topLeftLaunch{
-	min-width:34%;
-	min-height:50vh;
-	float:left;
+#topOneLaunch{
 	background:url(images/reproBG.png);
-	background-size:cover;
+		background-size:cover;
+	background-repeat: no-repeat;
 }
-#topMiddleLaunch{
-	min-width:33%;
-	min-height:50vh;
-	float:right;	
+#topTwoLaunch{
 	background:url(images/referralBG.jpg);
-	background-size:cover;
+		background-size:cover;
+	background-repeat: no-repeat;
 }
-#topRightLaunch{
-	min-width:33%;
-	min-height:50vh;
-	float:right;
+#topThreeLaunch{
 	background:url(images/financeBG.jpg);
-	background-size:cover;
+		background-size:cover;
+	background-repeat: no-repeat;
 }
-#bottomLeftLaunch{
-	min-width:34%;
-	min-height:50vh;
-	float:left;
+#topFourLaunch{
 	background:url(images/printBG.jpg);
-	background-size:cover;
+		background-size:cover;
+	background-repeat: no-repeat;
 }
-#bottomMiddleLaunch{
-	min-width:33%;
-	min-height:50vh;
-	float:left;
-	background:url(images/supportBG.jpg);
-	background-size:cover;
+#bottomOneLaunch{
+	background:url(images/classBG.jpg);
+		background-size:cover;
+	background-repeat: no-repeat;
 }
-#bottomRightLaunch{
-	min-width:33%;
-	min-height:50vh;
-	float:left;
+#bottomTwoLaunch{
 	background:url(images/weatherBG.jpg);
-	background-size:cover;
+		background-size:cover;
+	 	background-repeat: no-repeat;
+}
+#bottomThreeLaunch{
+	background:url(images/supportBG.jpg);
+			background-size:cover;
+	 	background-repeat: no-repeat;
+}
+#bottomFourLaunch{
+	background:url(images/portalBG.jpg);
+			background-size:cover;
+	 	background-repeat: no-repeat;
+}
+.tile{
+	min-width:25%;
+	min-height:50vh;
+	float:left;
+	overflow:hidden;
 }
 .image{
+	/* */
 	transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
